@@ -79,20 +79,20 @@ namespace LibraryControl.User.Lib
             xUserId.InnerText = guidUser;
             xUser.AppendChild(xUserId);
 
-            XmlElement xLogin = doc.CreateElement("name");
-            xLogin.InnerText = user.name;
-            xUser.AppendChild(xLogin);
+            XmlElement xName = doc.CreateElement("name");
+            xName.InnerText = user.name;
+            xUser.AppendChild(xName);
 
             XmlElement xPassword = doc.CreateElement("password");
             xPassword.InnerText = user.password;
             xUser.AppendChild(xPassword);
 
             XmlElement xAddress = doc.CreateElement("address");
-            xLogin.InnerText = user.address;
+            xAddress.InnerText = user.address;
             xUser.AppendChild(xAddress);
 
             XmlElement xContact = doc.CreateElement("contact");
-            xPassword.InnerText = user.contact;
+            xContact.InnerText = user.contact;
             xUser.AppendChild(xContact);
 
             XmlElement xEmail = doc.CreateElement("email");
@@ -100,7 +100,7 @@ namespace LibraryControl.User.Lib
             xUser.AppendChild(xEmail);
 
             XmlElement xIssueTag = doc.CreateElement("issuetag");
-            xPassword.InnerText = user.issueTag;
+            xIssueTag.InnerText = user.issueTag;
             xUser.AppendChild(xIssueTag);
 
             //XmlElement xtagsUsed = doc.CreateElement("tagsused");
