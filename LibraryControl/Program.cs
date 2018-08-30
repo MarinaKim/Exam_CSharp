@@ -1,4 +1,5 @@
-﻿using LibraryControl.User.Lib;
+﻿using LibraryControl.Admin.Lib.Model;
+using LibraryControl.User.Lib;
 using LibraryControl.User.Lib.Model;
 using System;
 using System.Collections.Generic;
@@ -25,12 +26,42 @@ namespace LibraryControl
                 int n = Int32.Parse(Console.ReadLine());
                 if (n == 1)
                 {
+                    ServiceAdminXmLDocument service = new ServiceAdminXmLDocument(@"C:\Users\Марина\Source\Repos\Exam_CSharp\LIBRARY\Admin");
+                    try
+                    {
+                        Administrator admin = new Administrator();
+                        Console.WriteLine("Enter your name: ");
+                        admin.name = Console.ReadLine();
+                        Console.WriteLine("Enter your password: ");
+                        admin.password = Console.ReadLine();
+
+                        //проверка на наличие admina с таким name b pass
+                        if ()
+                        { }
+                        //Console.WriteLine("Enter your address: ");
+                        //user.address = Console.ReadLine();
+                        //Console.WriteLine("Enter your contuctNum: ");
+                        //user.contact = Console.ReadLine();
+                        else {
+                            service.CreateAdmin(admin);
+                            Console.WriteLine("Администратор успешно добавлен");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
 
                 }
                 else if (n == 0)
                 {
-                    Console.WriteLine("Enter your login: ");
+                    Administrator admin = new Administrator();
+                    Console.WriteLine("Enter your name: ");
+                    admin.name = Console.ReadLine();
                     Console.WriteLine("Enter your password: ");
+                    admin.password = Console.ReadLine();
+                    //проверка на наличие admina с таким name b pass
+
                 }
             }
             else if (k == 2) //user
@@ -39,18 +70,19 @@ namespace LibraryControl
                 int n = Int32.Parse(Console.ReadLine());
                 if (n == 1)
                 {
-                    ServiceXmLDocument service = new ServiceXmLDocument(@"C:\Users\Марина\Source\Repos\Exam_CSharp\LIBRARY");
+                    ServiceXmLDocument service = new ServiceXmLDocument(@"C:\Users\Марина\Source\Repos\Exam_CSharp\LIBRARY\Users");
 
                     try
                     {
                         Users user = new Users();
-
+                        Console.WriteLine("Enter your email: ");
+                        user.email = Console.ReadLine();
+                        //проверка на наличие пользователя с таким email
+                        if()
                         Console.WriteLine("Enter your name: ");
                         user.name = Console.ReadLine();
                         Console.WriteLine("Enter your password: ");
-                        user.password = Console.ReadLine();
-                        Console.WriteLine("Enter your email: ");
-                        user.email = Console.ReadLine();
+                        user.password = Console.ReadLine();                        
                         Console.WriteLine("Enter your address: ");
                         user.address = Console.ReadLine();
                         Console.WriteLine("Enter your contuctNum: ");
@@ -74,6 +106,7 @@ namespace LibraryControl
                     Console.WriteLine("Enter your password: ");
                     user.password = Console.ReadLine();
 
+                    //проверка на наличие пользователя с таким email
                     if ()
                     {
 

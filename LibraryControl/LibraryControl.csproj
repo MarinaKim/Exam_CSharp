@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibraryControl.Admin.Lib\LibraryControl.Admin.Lib.csproj">
+      <Project>{BE2A6211-2E4D-496D-BEC8-1C9EDA33D526}</Project>
+      <Name>LibraryControl.Admin.Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryControl.User.Lib\LibraryControl.User.Lib.csproj">
       <Project>{75DCE592-4ADB-4034-8B8F-2D36ED8AFDE2}</Project>
       <Name>LibraryControl.User.Lib</Name>
