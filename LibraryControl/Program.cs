@@ -26,7 +26,7 @@ namespace LibraryControl
             {
                 Console.WriteLine("New admin? 1/0:");
                 int n = Int32.Parse(Console.ReadLine());
-                if (n == 1)
+                if (n == 1)//new admin
                 {
                     ServiceAdminXmLDocument service = new ServiceAdminXmLDocument(@"C:\Users\Марина\Source\Repos\Exam_CSharp\LIBRARY\Admin");
                     try
@@ -35,31 +35,40 @@ namespace LibraryControl
                         admin.GetInfoAdmin();
 
                         //проверка на наличие admina с таким name b pass
-                        if ()
-                        { }
-                        //Console.WriteLine("Enter your address: ");
-                        //user.address = Console.ReadLine();
-                        //Console.WriteLine("Enter your contuctNum: ");
-                        //user.contact = Console.ReadLine();
-                        else
+                        if () //не существует
                         {
                             service.CreateAdmin(admin);
                             admins.Add(admin);
                             Console.WriteLine("Администратор успешно добавлен");
+                        }
+                       
+                        else
+                        {
+                            Console.WriteLine("Администратор уже существует.");  
                         }
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);
                     }
-
                 }
                 else if (n == 0)
                 {
                     Administrator admin = new Administrator();
                     admin.GetInfoAdmin();
                     //проверка на наличие admina с таким name b pass
-
+                    if ()
+                    {
+                        Console.WriteLine("Выберите: ");
+                        Console.WriteLine("1. Удалить пользователя.");
+                        Console.WriteLine("2. Добавить книгу.");
+                        Console.WriteLine("3. Добавить пользователя.");
+                        Console.WriteLine("4. Сменить пароль.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Администратор с тиким именем не существует.");
+                    }
                 }
             }
             else if (k == 2) //user
@@ -106,6 +115,7 @@ namespace LibraryControl
                         Console.WriteLine("Выберите: ");
                         Console.WriteLine("1. сдать книгу");
                         Console.WriteLine("2. выбрать книгу");
+                        Console.WriteLine("3. сменить пароль");
                         int v = Int32.Parse(Console.ReadLine());
                         if (v == 1)
                         {
@@ -114,7 +124,12 @@ namespace LibraryControl
                         }
                         else if (v == 2)
                         {
-
+                            Book book = new Book();
+                            Console.WriteLine("Введите название книги: {0}", book.name);
+                        }
+                        else if (v == 3)
+                        {
+                            Console.WriteLine("Введите новый пароль: {0}",user.password);
                         }
                     }
                     else
