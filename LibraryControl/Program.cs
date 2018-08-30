@@ -40,8 +40,7 @@ namespace LibraryControl
                             service.CreateAdmin(admin);
                             admins.Add(admin);
                             Console.WriteLine("Администратор успешно добавлен");
-                        }
-                       
+                        }                       
                         else
                         {
                             Console.WriteLine("Администратор уже существует.");  
