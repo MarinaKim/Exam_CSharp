@@ -32,29 +32,6 @@ namespace LibraryControl.BookStock.Lib.Model
             this.edition = edition;
             this.status = status;
         }
-        //public void SerializationBook(List<Book> listBook)
-        //{
-        //    BinaryFormatter formatter = new BinaryFormatter();
-
-        //    using (FileStream fs = new FileStream("listSerial.txt", FileMode.OpenOrCreate))
-        //    {
-        //        formatter.Serialize(fs, listBook);
-        //        Console.WriteLine("Объект сериализрован");
-        //    }
-        //}
-        //public void DeserializationBook(string pathDocument)
-        //{
-        //    BinaryFormatter bf = new BinaryFormatter();
-        //    using (FileStream fs = new FileStream(pathDocument, FileMode.OpenOrCreate))
-        //    {
-        //        var t = (List<Book>)bf.Deserialize(fs);
-        //        Console.WriteLine("Объект десериализирован");
-        //        foreach (Book item in t)
-        //        {
-        //            Console.WriteLine(item.No + "\t" + item.name + "\t" + item.code + "\t" + item.authorName + "\t" + item.publishDate + "\t" + item.edition + "\t" + item.status);
-        //        }
-
-        //    }
-        //}
+        
     }
 }

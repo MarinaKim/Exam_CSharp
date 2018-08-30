@@ -16,7 +16,7 @@ namespace LibraryControl.User.Lib.Model
         public string contact { get; set; }
         public string email { get; set; }
         public string issueTag { get; set; }
-        //public List<Book> tagsUsed { get; set; }
+        public List<Book> tagsUsed { get; set; }
 
         public Users() { }
         public Users( string id, string name, string password, string address, string contact, string email, string issueTag)

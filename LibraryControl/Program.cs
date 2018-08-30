@@ -1,4 +1,5 @@
 ﻿using LibraryControl.Admin.Lib.Model;
+using LibraryControl.BookStock.Lib.Model;
 using LibraryControl.User.Lib;
 using LibraryControl.User.Lib.Model;
 using System;
@@ -102,8 +103,19 @@ namespace LibraryControl
                     //проверка на наличие пользователя с таким email
                     if ()// если есть
                     {
-                        Console.WriteLine("");
+                        Console.WriteLine("Выберите: ");
+                        Console.WriteLine("1. сдать книгу");
+                        Console.WriteLine("2. выбрать книгу");
+                        int v = Int32.Parse(Console.ReadLine());
+                        if (v == 1)
+                        {
+                            Book book = new Book();
+                            Console.WriteLine("Введите название книги: {0}",book.name);
+                        }
+                        else if (v == 2)
+                        {
 
+                        }
                     }
                     else
                     {
