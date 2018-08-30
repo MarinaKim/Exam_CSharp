@@ -14,5 +14,13 @@ namespace LibraryControl.Admin.Lib.Model
         public string adminRights { get; set; }
         public string libRight { get; set; }
         public string readerRights { get; set; }
+
+        public void GetInfoAdmin()
+        {            
+            Console.WriteLine("Enter your name: {0}",name);           
+            Console.WriteLine("Enter your password: {0}",password);            
+        }
+
+       
     }
 }

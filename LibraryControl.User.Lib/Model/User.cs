@@ -29,5 +29,18 @@ namespace LibraryControl.User.Lib.Model
             this.email = email;
             this.issueTag = issueTag;
         }
+
+        public void GetFirstInfoUser()
+        {
+            Console.WriteLine("Enter your email: {0}",email);
+            Console.WriteLine("Enter your password: {0}", password);
+        }
+
+        public void GetSecondInfoUser()
+        {
+            Console.WriteLine("Enter your name: {0}", name);           
+            Console.WriteLine("Enter your address: {0}",address);           
+            Console.WriteLine("Enter your contuctNum: {0}",contact);            
+        }
     }
 }

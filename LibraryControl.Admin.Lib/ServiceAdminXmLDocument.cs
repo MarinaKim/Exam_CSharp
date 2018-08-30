@@ -85,31 +85,12 @@ namespace LibraryControl.User.Lib
 
             XmlElement xPassword = doc.CreateElement("password");
             xPassword.InnerText = admin.password;
-            xAdmin.AppendChild(xPassword);
-
-            //XmlElement xAddress = doc.CreateElement("address");
-            //xAddress.InnerText = user.address;
-            //xAdmin.AppendChild(xAddress);
-
-            //XmlElement xContact = doc.CreateElement("contact");
-            //xContact.InnerText = user.contact;
-            //xAdmin.AppendChild(xContact);
-
-            //XmlElement xEmail = doc.CreateElement("email");
-            //xEmail.InnerText = user.email;
-            //xAdmin.AppendChild(xEmail);
-
-            //XmlElement xIssueTag = doc.CreateElement("issuetag");
-            //xIssueTag.InnerText = user.issueTag;
-            //xAdmin.AppendChild(xIssueTag);
-
-            //XmlElement xtagsUsed = doc.CreateElement("tagsused");
-            //xEmail.InnerText = user.tagsUsed;
-            //xUser.AppendChild(xtagsUsed);
+            xAdmin.AppendChild(xPassword);            
 
             doc.DocumentElement.AppendChild(xAdmin);
             doc.Save(pathDocument);
-
         }
+
+        
     }
 }

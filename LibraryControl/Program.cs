@@ -14,6 +14,7 @@ namespace LibraryControl
         static void Main(string[] args)
         {
             List<Users> users = new List<Users>();
+            List<Administrator> admins = new List<Administrator>();
 
             Console.WriteLine("Choose:");
             Console.WriteLine("1.Administrator");
@@ -30,10 +31,7 @@ namespace LibraryControl
                     try
                     {
                         Administrator admin = new Administrator();
-                        Console.WriteLine("Enter your name: ");
-                        admin.name = Console.ReadLine();
-                        Console.WriteLine("Enter your password: ");
-                        admin.password = Console.ReadLine();
+                        admin.GetInfoAdmin();
 
                         //проверка на наличие admina с таким name b pass
                         if ()
@@ -42,8 +40,10 @@ namespace LibraryControl
                         //user.address = Console.ReadLine();
                         //Console.WriteLine("Enter your contuctNum: ");
                         //user.contact = Console.ReadLine();
-                        else {
+                        else
+                        {
                             service.CreateAdmin(admin);
+                            admins.Add(admin);
                             Console.WriteLine("Администратор успешно добавлен");
                         }
                     }
@@ -56,10 +56,7 @@ namespace LibraryControl
                 else if (n == 0)
                 {
                     Administrator admin = new Administrator();
-                    Console.WriteLine("Enter your name: ");
-                    admin.name = Console.ReadLine();
-                    Console.WriteLine("Enter your password: ");
-                    admin.password = Console.ReadLine();
+                    admin.GetInfoAdmin();
                     //проверка на наличие admina с таким name b pass
 
                 }
@@ -68,28 +65,27 @@ namespace LibraryControl
             {
                 Console.WriteLine("New user? 1/0:");
                 int n = Int32.Parse(Console.ReadLine());
-                if (n == 1)
+                if (n == 1) //new user
                 {
                     ServiceXmLDocument service = new ServiceXmLDocument(@"C:\Users\Марина\Source\Repos\Exam_CSharp\LIBRARY\Users");
 
                     try
                     {
                         Users user = new Users();
-                        Console.WriteLine("Enter your email: ");
-                        user.email = Console.ReadLine();
-                        //проверка на наличие пользователя с таким email
-                        if()
-                        Console.WriteLine("Enter your name: ");
-                        user.name = Console.ReadLine();
-                        Console.WriteLine("Enter your password: ");
-                        user.password = Console.ReadLine();                        
-                        Console.WriteLine("Enter your address: ");
-                        user.address = Console.ReadLine();
-                        Console.WriteLine("Enter your contuctNum: ");
-                        user.contact = Console.ReadLine();
+                        user.GetFirstInfoUser();
 
-                        service.CreateUser(user);
-                        Console.WriteLine("пользователь успешно добавлен");
+                        //проверка на наличие пользователя с таким email
+                        if () //не существует
+                        {
+                            user.GetSecondInfoUser();
+                            service.CreateUser(user);
+                            users.Add(user);
+                            Console.WriteLine("пользователь успешно добавлен");
+                        }
+                        else
+                        { 
+                            Console.WriteLine("Пользователь с таким email уже существует.");                         
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -101,19 +97,17 @@ namespace LibraryControl
                 {
                     Users user = new Users();
 
-                    Console.WriteLine("Enter your name: ");
-                    user.name = Console.ReadLine();
-                    Console.WriteLine("Enter your password: ");
-                    user.password = Console.ReadLine();
+                    user.GetFirstInfoUser();
 
                     //проверка на наличие пользователя с таким email
-                    if ()
+                    if ()// если есть
                     {
+                        Console.WriteLine("");
 
                     }
                     else
                     {
-
+                        Console.WriteLine("Такого пользователя не существует.");
                     }
 
                 }
