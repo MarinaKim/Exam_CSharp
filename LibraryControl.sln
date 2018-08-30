@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryControl.FeedBack.Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWork", "BookWork\BookWork.csproj", "{51CE82AB-31B1-480C-823D-3D9E5F79769E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserWork", "UserWork\UserWork.csproj", "{6AF20961-B4EA-4852-932E-F5A7922A4224}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{51CE82AB-31B1-480C-823D-3D9E5F79769E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CE82AB-31B1-480C-823D-3D9E5F79769E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CE82AB-31B1-480C-823D-3D9E5F79769E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AF20961-B4EA-4852-932E-F5A7922A4224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AF20961-B4EA-4852-932E-F5A7922A4224}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AF20961-B4EA-4852-932E-F5A7922A4224}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AF20961-B4EA-4852-932E-F5A7922A4224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,12 +44,11 @@ namespace LibraryControl
                     try
                     {
                         Users user = new Users();
-                       
+
                         Console.WriteLine("Enter your name: ");
                         user.name = Console.ReadLine();
                         Console.WriteLine("Enter your password: ");
                         user.password = Console.ReadLine();
-
                         Console.WriteLine("Enter your email: ");
                         user.email = Console.ReadLine();
                         Console.WriteLine("Enter your address: ");
